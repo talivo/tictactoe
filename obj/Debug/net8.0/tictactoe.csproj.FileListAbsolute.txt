@@ -1,0 +1,15 @@
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/bin/Debug/net8.0/tictactoe
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/bin/Debug/net8.0/tictactoe.deps.json
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/bin/Debug/net8.0/tictactoe.runtimeconfig.json
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/bin/Debug/net8.0/tictactoe.dll
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/bin/Debug/net8.0/tictactoe.pdb
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.GeneratedMSBuildEditorConfig.editorconfig
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.AssemblyInfoInputs.cache
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.AssemblyInfo.cs
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.csproj.CoreCompileInputs.cache
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.sourcelink.json
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.dll
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/refint/tictactoe.dll
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.pdb
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/tictactoe.genruntimeconfig.cache
+/Users/brucewayne/Documents/dev/software-ontwikkelen/tictactoe/obj/Debug/net8.0/ref/tictactoe.dll
