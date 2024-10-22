@@ -29,34 +29,48 @@ while (CheckVictory() == null && numTurns < 9) {
 
     if (isPlayerTurn) {
         Console.WriteLine("Player turn");
-    } else {
-        Console.WriteLine("Computer turn");
-    }
+        string choice = Console.ReadLine();
+        
+        if (grid.Contains(choice) && choice != "X" && choice != "O") {
+            int gridIndex = Convert.ToInt32(choice) - 1;
 
-    string choice = Console.ReadLine();
-    if (grid.Contains(choice) && choice != "X" && choice != "O") {
-        int gridIndex = Convert.ToInt32(choice) - 1;
-
-        // Place symbol on the grid
-        if (grid[gridIndex] != "X" && grid[gridIndex] != "O") {
-            if (isPlayerTurn) {
+            // Place player symbol on the grid
+            if (grid[gridIndex] != "X" && grid[gridIndex] != "O") {
                 grid[gridIndex] = userSymbol;
+                numTurns++;
             } else {
-                grid[gridIndex] = computerSymbol;
+                Console.WriteLine("That spot is already taken, try again.");
+                continue;
             }
-            numTurns++;
         } else {
-            Console.WriteLine("That spot is already taken, try again.");
+            Console.WriteLine("Invalid input, try again.");
             continue;
         }
     } else {
-        Console.WriteLine("Invalid input, try again.");
-        continue;
+        Console.WriteLine("Computer turn");
+
+        bool computerInput = false;
+        var rand = new Random();
+
+        while (!computerInput) {
+            int computerGuess = rand.Next(1, 10);
+            string choice = computerGuess.ToString();
+
+            if (grid.Contains(choice) && choice != "X" && choice != "O") {
+                int gridIndex = Convert.ToInt32(choice) - 1;
+                
+                // Place computer symbol on the grid
+                grid[gridIndex] = computerSymbol;
+                computerInput = true;
+                numTurns++;
+            }
+        }
     }
 
     // Switch turns
     isPlayerTurn = !isPlayerTurn;
 }
+
 
 // Check for a win or tie
 string winner = CheckVictory();
