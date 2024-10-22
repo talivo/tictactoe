@@ -2,6 +2,29 @@
 bool isPlayerTurn = true;
 int numTurns = 0;
 
+// Player chooses desired symbol.
+Console.WriteLine("Choose a symbol");
+Console.WriteLine("For X, input X");
+Console.WriteLine("For O, input O");
+string userInputSymbol = Console.ReadLine();
+string userSymbol;
+string computerSymbol;
+
+if(userInputSymbol == "x" || userInputSymbol == "X") {
+    userSymbol = "X";
+    computerSymbol = "O";
+    Console.WriteLine($"You have chosen for {userSymbol}.");
+} else if (userInputSymbol == "o" || userInputSymbol == "O") {
+    userSymbol = "O";
+    computerSymbol = "X";
+    Console.WriteLine($"You have chosen for {userSymbol}.");
+} else {
+    Console.WriteLine("Incorrect input, try again.");
+    return;
+}
+
+// Decides whose turn it is.
+
 while (!CheckVictory() && numTurns != 9) {
     PrintGrid();
 
@@ -15,9 +38,9 @@ while (!CheckVictory() && numTurns != 9) {
     if(grid.Contains(choice) && choice != "X" && choice != "0"){
         int gridIndex = Convert.ToInt32(choice) - 1;
         if (isPlayerTurn){
-            grid[gridIndex] = "X";
+            grid[gridIndex] = userSymbol;
         } else {
-            grid[gridIndex] = "0";
+            grid[gridIndex] = computerSymbol;
         }
         numTurns++;
     }
@@ -32,6 +55,8 @@ if(CheckVictory()) {
     PrintGrid();
     Console.WriteLine("Tie");
 }
+
+// Check if someone has won or if there is a tie.
 
 bool CheckVictory() {
     bool row1 = grid[0] == grid[1] && grid[1] == grid[2];
